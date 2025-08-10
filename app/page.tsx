@@ -55,13 +55,12 @@ export default function Home() {
 
         <p className="text-center text-zinc-600 leading-8">
           Innobound is dedicated to enhancing the quality of life for the elderly through innovative technology
-          solutions.Elderly people who are lonely for long periods of time are at significantly increased risk of
+          solutions.Elderly people who are lonely for long periods of time are at significantly increased risk of{" "}
           <em className="font-bold">cognitive decline</em>. However, traditional elderly care models are unable to meet
           the needs of round-the-clock companionship and <em className="font-bold">real-time health monitoring</em> due
           to issues such as a shortage of care workers and limited coverage. Against this backdrop, the Hong Kong
-          Polytechnic University has launched
-          <em className="font-bold">Robopin</em>, a smart device that aims to use technological innovation to transform
-          the quality of life for elderly people and create a new paradigm of{" "}
+          Polytechnic University has launched <em className="font-bold">Robopin</em>, a smart device that aims to use
+          technological innovation to transform the quality of life for elderly people and create a new paradigm of{" "}
           <em className="font-bold">&quot;digital companionship&quot;</em>.
         </p>
       </section>
