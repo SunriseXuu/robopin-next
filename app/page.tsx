@@ -44,7 +44,7 @@ export default function Home() {
       <section className="bg-zinc-50">
         <div className="w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
           <label className="text-xs text-red-400 font-bold">Future Potential</label>
-          <h2 className="text-3xl font-bold mb-6">What's new about Robopin?</h2>
+          <h2 className="text-3xl font-bold mb-6">What&apos;s new about Robopin?</h2>
 
           <FuturePotentialCards cards={futurePotentialCards} />
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
           Polytechnic University has launched
           <em className="font-bold">Robopin</em>, a smart device that aims to use technological innovation to transform
           the quality of life for elderly people and create a new paradigm of{" "}
-          <em className="font-bold">"digital companionship"</em>.
+          <em className="font-bold">&quot;digital companionship&quot;</em>.
         </p>
       </section>
 

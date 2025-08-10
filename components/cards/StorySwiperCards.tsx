@@ -65,7 +65,7 @@ export default function StorySwiperCards({ cards }: { cards: UserProfile[] }) {
   // 无限横向滚动实现
   useEffect(() => {
     const rowDiv = rowRef.current;
-    let timer: NodeJS.Timeout;
+    const timer: NodeJS.Timeout = setInterval(scrollRow, 16); // 约60fps;
 
     function scrollRow() {
       if (!rowDiv || paused) return;
@@ -78,7 +78,6 @@ export default function StorySwiperCards({ cards }: { cards: UserProfile[] }) {
       } else rowDiv.scrollLeft = scrollLeftRef.current;
     }
 
-    timer = setInterval(scrollRow, 16); // 约60fps
     return () => {
       clearInterval(timer);
     };
