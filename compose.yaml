@@ -16,6 +16,7 @@ services:
       - ./nginx/innobound.tech.key:/etc/nginx/innobound.tech.key
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - robopin-next
     networks:
