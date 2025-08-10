@@ -1,103 +1,79 @@
-import Image from "next/image";
+import FunctionAccordionCards from "@/components/cards/FunctionAccordionCards";
+import ImageCollapseCards from "@/components/cards/ImageCollapseCards";
+import StorySwiperCards from "@/components/cards/StorySwiperCards";
+import FuturePotentialCards from "@/components/cards/FuturePotentialCards";
+
+import { functionExperienceData, keyAdvantagesData, userProfileStories, futurePotentialCards } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col">
+      <section className="max-w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
+        <h1 className="text-[40px] font-bold">Elderly Smart Terminal</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="flex flex-col items-center gap-1">
+          <p className="text-2xl text-zinc-600">The intelligent companion redefining elderly care with AI-driven</p>
+          <p className="text-2xl text-zinc-600">emotional support and security.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className="bg-zinc-50">
+        <div className="max-w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
+          <label className="text-xs text-red-400 font-bold">Thoughtfully Designed Features</label>
+
+          <div className="flex flex-col items-center mb-6 gap-1">
+            <h2 className="text-3xl font-bold">Choose the function you want</h2>
+            <h2 className="text-3xl font-bold">to experience</h2>
+          </div>
+
+          <FunctionAccordionCards cards={functionExperienceData} />
+        </div>
+      </section>
+
+      <section className="w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
+        <label className="text-xs text-red-400 font-bold">Key Advantages</label>
+
+        <div className="flex flex-col items-center mb-6 gap-1">
+          <h2 className="text-3xl font-bold">Get started with just a few</h2>
+          <h2 className="text-3xl font-bold">verbal interactions</h2>
+        </div>
+
+        <ImageCollapseCards cards={keyAdvantagesData} />
+      </section>
+
+      <section className="bg-zinc-50">
+        <div className="w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
+          <label className="text-xs text-red-400 font-bold">Future Potential</label>
+          <h2 className="text-3xl font-bold mb-6">What's new about Robopin?</h2>
+
+          <FuturePotentialCards cards={futurePotentialCards} />
+        </div>
+      </section>
+
+      <section className="max-w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
+        <label className="text-xs text-red-400 font-bold">About Innobound</label>
+
+        <p className="text-center text-zinc-600 leading-8">
+          Innobound is dedicated to enhancing the quality of life for the elderly through innovative technology
+          solutions.Elderly people who are lonely for long periods of time are at significantly increased risk of
+          <em className="font-bold">cognitive decline</em>. However, traditional elderly care models are unable to meet
+          the needs of round-the-clock companionship and <em className="font-bold">real-time health monitoring</em> due
+          to issues such as a shortage of care workers and limited coverage. Against this backdrop, the Hong Kong
+          Polytechnic University has launched
+          <em className="font-bold">Robopin</em>, a smart device that aims to use technological innovation to transform
+          the quality of life for elderly people and create a new paradigm of{" "}
+          <em className="font-bold">"digital companionship"</em>.
+        </p>
+      </section>
+
+      <section className="bg-zinc-50">
+        <div className="w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
+          <label className="text-xs text-red-400 font-bold">User Profile</label>
+          <h2 className="text-3xl font-bold mb-6">Stories behind Innobound</h2>
+
+          <StorySwiperCards cards={userProfileStories} />
+        </div>
+      </section>
     </div>
   );
 }
