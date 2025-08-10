@@ -2,18 +2,22 @@ export const functionExperienceData = [
   {
     title: "Emotional Support",
     content: "Voice cloning of relatives for heartfelt conversations that combat loneliness.",
+    coverUrl: "/functions/function1.png",
   },
   {
     title: "Security Guard",
     content: "Advanced fall detection with immediate alerts to keep loved ones safe.",
+    coverUrl: "/functions/function2.png",
   },
   {
     title: "Reminder Function",
     content: "Customizable reminders for medications and daily actions, seamlessly integrated.",
+    coverUrl: "/functions/function3.png",
   },
   {
     title: "Item Identification",
     content: "AI-powered recognition to assist with everyday tasks effortlessly.",
+    coverUrl: "/functions/function4.png",
   },
 ];
 

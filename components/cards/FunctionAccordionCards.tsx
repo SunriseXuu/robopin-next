@@ -2,32 +2,42 @@
 
 import { useState } from "react";
 
-export default function FunctionAccordionCards({ cards }: { cards: { title: string; content: string }[] }) {
+export default function FunctionAccordionCards({
+  cards,
+}: {
+  cards: {
+    title: string;
+    content: string;
+    coverUrl: string;
+  }[];
+}) {
   const [activeIdx, setActiveIdx] = useState<number>(0);
 
   return (
     <div className="w-full flex justify-between items-center gap-6">
-      {cards.map(({ title, content }, idx) => {
+      {cards.map(({ title, content, coverUrl }, idx) => {
         const isActive = activeIdx === idx;
         return (
           <div
             key={idx}
-            className="h-96 relative flex flex-col justify-end duration-500 rounded-2xl shadow-sm cursor-pointer p-9"
-            style={{ flex: isActive ? cards.length + 1 : 1 }}
+            className="h-96 relative flex flex-col justify-end bg-center bg-cover bg-no-repeat duration-500 rounded-2xl shadow-sm overflow-hidden cursor-pointer p-9"
+            style={{ flex: isActive ? cards.length + 1 : 1, backgroundImage: `url(${coverUrl})` }}
             onMouseEnter={() => setActiveIdx(idx)}
           >
+            <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-black/70 to-transparent z-0" />
+
             <h3
-              className={`font-bold transition-all ease-in-out duration-500 whitespace-nowrap text-lg bottom-24 ${
-                isActive ? "absolute rotate-0" : "absolute left-1/2 -translate-x-1/2 -rotate-90"
+              className={`absolute text-lg text-white font-bold transition-all ease-in-out duration-500 whitespace-nowrap bottom-24 z-10 ${
+                isActive ? "rotate-0" : "left-1/2 -translate-x-1/2 -rotate-90"
               }`}
             >
               {title}
             </h3>
 
             <div
-              className={`w-full text-sm text-zinc-600 transition-all ease-in-out ${
+              className={`relative w-full text-sm text-zinc-200 transition-all ease-in-out ${
                 isActive ? "opacity-100" : "opacity-0"
-              } duration-500`}
+              } duration-500 z-10`}
             >
               {content}
             </div>
