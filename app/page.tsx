@@ -8,12 +8,17 @@ import { functionExperienceData, keyAdvantagesData, userProfileStories, futurePo
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="max-w-[1024px] flex flex-col items-center mx-auto py-28 gap-8">
-        <h1 className="text-[40px] font-bold">Elderly Smart Terminal</h1>
+      <section
+        className="w-full relative flex flex-col items-center bg-center bg-cover mx-auto py-28 gap-8"
+        style={{ backgroundImage: "url('/hero.png')" }}
+      >
+        <div className="w-full h-full absolute top-0 left-0 bg-black/70 z-0" />
 
-        <div className="flex flex-col items-center gap-1">
-          <p className="text-2xl text-zinc-600">The intelligent companion redefining elderly care with AI-driven</p>
-          <p className="text-2xl text-zinc-600">emotional support and security.</p>
+        <h1 className="relative text-[40px] text-white font-bold z-10">Elderly Smart Terminal</h1>
+
+        <div className="relative flex flex-col items-center text-2xl text-zinc-300 gap-1 z-10">
+          <p>The intelligent companion redefining elderly care with AI-driven</p>
+          <p>emotional support and security.</p>
         </div>
       </section>
 
@@ -55,7 +60,7 @@ export default function Home() {
 
         <p className="text-center text-zinc-600 leading-8">
           Innobound is dedicated to enhancing the quality of life for the elderly through innovative technology
-          solutions.Elderly people who are lonely for long periods of time are at significantly increased risk of{" "}
+          solutions. Elderly people who are lonely for long periods of time are at significantly increased risk of{" "}
           <em className="font-bold">cognitive decline</em>. However, traditional elderly care models are unable to meet
           the needs of round-the-clock companionship and <em className="font-bold">real-time health monitoring</em> due
           to issues such as a shortage of care workers and limited coverage. Against this backdrop, the Hong Kong

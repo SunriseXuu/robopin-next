@@ -23,7 +23,7 @@ function Card({ username, age, career, avatarUrl, income, interests, dialogs }: 
       </div>
 
       <p className="text-xs text-zinc-600">
-        <em>{interests.join("、")}</em>
+        <em>{interests.join(", ")}</em>
       </p>
 
       <div className="flex items-center gap-4">
@@ -38,7 +38,7 @@ function Card({ username, age, career, avatarUrl, income, interests, dialogs }: 
         <div className="flex flex-col gap-0.5">
           <p className="text-sm font-semibold">{username}</p>
           <p className="text-xs text-zinc-600">
-            Age {age} / {career} / Income {income}
+            Age {age} - {career} - ￥{income}/month
           </p>
         </div>
       </div>
@@ -95,7 +95,6 @@ export default function StorySwiperCards({ cards }: { cards: UserProfile[] }) {
         onMouseLeave={() => setPaused(false)}
         style={{ direction: "ltr" }}
       >
-        <CardList cards={cards} />
         <CardList cards={cards} />
         <CardList cards={cards} />
       </div>

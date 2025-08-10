@@ -24,6 +24,7 @@ export const functionExperienceData = [
 export const keyAdvantagesData = [
   {
     title: "Highly Interactive",
+    coverUrl: "/features/feature1.png",
     subTitles: [
       {
         title: "AI Companion",
@@ -37,6 +38,7 @@ export const keyAdvantagesData = [
   },
   {
     title: "Smart Perception",
+    coverUrl: "/features/feature2.png",
     subTitles: [
       {
         title: "Environmental Comprehension",
@@ -55,6 +57,7 @@ export const keyAdvantagesData = [
   },
   {
     title: "Life Assistant",
+    coverUrl: "/features/feature3.png",
     subTitles: [
       {
         title: "Daily Assistant",
@@ -69,6 +72,30 @@ export const keyAdvantagesData = [
 ];
 
 export const userProfileStories = [
+  {
+    username: "Simon Yiu",
+    age: 65,
+    career: "Retired educator",
+    avatarUrl: "/avatars/user3.png",
+    income: 10000,
+    interests: ["Health monitor and reminder", "Medication reminder"],
+    dialogs: [
+      "The blood glucose meter should be pricked with your fingers, connected to the mobile phone, and recorded numbers, and one less step will be measured in vain.",
+      "I just want to know whether it's 'normal' or 'high', and I have to toss for half an hour!",
+    ],
+  },
+  {
+    username: "Amily Tang",
+    age: 78,
+    career: "Retired educator",
+    avatarUrl: "/avatars/user4.png",
+    income: 5000,
+    interests: ["Verbal Interaction", "AI emotional care", "Life company"],
+    dialogs: [
+      "The video call is always wrong, but I want to see my son but it becomes a ceiling slap.",
+      "The child said, 'Click the green button', but my eyes were all gray...",
+    ],
+  },
   {
     username: "Lin Fanfang",
     age: 78,

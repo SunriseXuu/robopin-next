@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ImageCollapseCards({
   cards,
 }: {
   cards: {
     title: string;
+    coverUrl: string;
     subTitles: {
       title: string;
       list: string[];
@@ -17,7 +19,15 @@ export default function ImageCollapseCards({
 
   return (
     <div className="w-full flex justify-between items-start gap-12">
-      <div className="basis-3/5 h-96 shadow-sm rounded-2xl"></div>
+      <div className="basis-3/5 h-96 shadow-sm rounded-2xl overflow-hidden">
+        <Image
+          className="w-full h-full object-cover transition-all duration-300"
+          src={cards[openIdx].coverUrl}
+          alt={cards[openIdx].title}
+          width={1024}
+          height={768}
+        />
+      </div>
 
       <div className="basis-2/5 min-h-96 flex flex-col gap-2">
         {cards.map((card, idx) => (
