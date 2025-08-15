@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export default function ImageCollapseCards({
   cards,
@@ -18,18 +17,12 @@ export default function ImageCollapseCards({
   const [openIdx, setOpenIdx] = useState<number>(0);
 
   return (
-    <div className="w-full flex justify-between items-start gap-12">
-      <div className="basis-3/5 h-96 shadow-sm rounded-2xl overflow-hidden">
-        <Image
-          className="w-full h-full object-cover transition-all duration-300"
-          src={cards[openIdx].coverUrl}
-          alt={cards[openIdx].title}
-          width={1024}
-          height={768}
-        />
+    <div className="w-full flex max-lg:flex-col justify-between items-start max-lg:px-8 gap-12">
+      <div className="lg:basis-3/5 w-full lg:aspect-[5/3] aspect-[3/4] shadow-sm rounded-2xl overflow-hidden">
+        <iframe className="w-full h-full" src="http://localhost:3001/scenes/innobound" />
       </div>
 
-      <div className="basis-2/5 min-h-96 flex flex-col gap-2">
+      <div className="lg:basis-2/5 w-full min-h-96 flex flex-col gap-2">
         {cards.map((card, idx) => (
           <div key={idx} className={`border-b border-zinc-400 cursor-pointer py-2`} onClick={() => setOpenIdx(idx)}>
             <h3 className="font-semibold mb-2">{card.title}</h3>
