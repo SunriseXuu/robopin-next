@@ -6,4 +6,8 @@ services:
     ports:
       - 3000:3000
     networks:
-      - haishan-static-next_haishan-static-network
+      - robopin-network
+
+networks:
+  robopin-network:
+    driver: bridge
