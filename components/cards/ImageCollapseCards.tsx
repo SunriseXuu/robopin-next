@@ -19,7 +19,7 @@ export default function ImageCollapseCards({
   return (
     <div className="w-full flex max-lg:flex-col justify-between items-start max-lg:px-8 gap-12">
       <div className="lg:basis-3/5 w-full lg:aspect-[5/3] aspect-[3/4] shadow-sm rounded-2xl overflow-hidden">
-        <iframe className="w-full h-full" src="https://www.haishan.design/scenes/innobound" />
+        <iframe className="w-full h-full" src="https://www.haishan.tech/scenes/innobound" />
       </div>
 
       <div className="lg:basis-2/5 w-full min-h-96 flex flex-col gap-2">
